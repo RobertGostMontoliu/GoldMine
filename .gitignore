@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# Except the src directory
+!src/
+
+# Track files and subdirectories inside src/
+!src/**
+
+# Don't ignore the requirements.txt file
+!requirements.txt
+!.gitignore
