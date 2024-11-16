@@ -325,6 +325,65 @@ def create_settings_page():
     
     return page
 
+def create_payment_page():
+    page = QWidget()
+    layout = QVBoxLayout(page)
+    layout.setContentsMargins(0, 0, 0, 0)
+    layout.setSpacing(40)
+    layout.setAlignment(Qt.AlignTop)  # Ensure the layout starts from the top
+    
+    title_label = QLabel('Billing')
+    title_label.setAlignment(Qt.AlignCenter)
+    title_label.setFont(QFont('Arial', 24, QFont.Bold))
+    layout.addWidget(title_label)
+    
+    # Create a table to display the billing information
+    billing_table = QTableWidget()
+    billing_table.setColumnCount(3)
+    billing_table.setHorizontalHeaderLabels(["Date", "Amount", "Status"])
+    billing_table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+    billing_table.setShowGrid(False)
+    billing_table.setAlternatingRowColors(True)
+    billing_table.setStyleSheet("""
+        QTableWidget {
+            background-color: #34495e;
+            color: #dfe6e9;
+            border: none;
+        }
+        QHeaderView::section {
+            background-color: #34495e;
+            color: #ffffff;
+            font-weight: bold;
+            border: none;
+        }
+        QTableWidget::item {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            border: none;
+        }
+        QTableWidget::item:alternate {
+            background-color: #34495e;
+        }
+        QTableWidget::item:selected {
+            background-color: grey; /* Blue highlight for selected rows */
+            color: #ffffff; /* White text for selected rows */
+        }
+        QTableCornerButton::section {
+            background-color: #34495e;
+            border: none;
+        }
+        QHeaderView::section:vertical {
+            background-color: #2d3436;
+            color: #ffffff;
+            font-weight: bold;
+            border: none;
+        }
+     """)
+    
+    layout.addWidget(billing_table)
+    
+    return page
+
 def get_screens():
     screens = []
     for screen in QApplication.screens():

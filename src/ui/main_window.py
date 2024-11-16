@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import (QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, QStackedWidget, QInputDialog, QMessageBox, QDesktopWidget, QApplication)
 from PyQt5.QtCore import Qt
 from ui.components import create_sidebar, create_profile_button
-from ui.pages import (create_home_page, create_telegram_tools_page, create_settings_page, load_profiles_from_api, create_twitter_tools_page)
+from ui.pages import (create_home_page, create_telegram_tools_page, create_settings_page, load_profiles_from_api, create_twitter_tools_page, create_payment_page)
 from ui.AppTheme import apply_theme
 from ui.Sonic.SonicPage import SonicPage
 from ui.Blum.BlumPage import BlumPage
@@ -15,6 +15,7 @@ from ui.Wallets.TonKeeper import TonKeeperWindow
 from ui.WolfGame.WolfPage import WolfGamePage
 from ui.Wow.WowPage import WowPage
 from ui.Wallets.Ronin import RoninWindow
+from ui.PaymentPage.PayPage import PayPage
 from ui.key_manager import KeyManager
 from datetime import datetime
 
@@ -48,7 +49,7 @@ class AdministradorPrincipal(QMainWindow):
         self.sidebar = create_sidebar(self, self.home_page, self.blum_airdrop_page, self.wow_page, self.Pawns_page, 
                                       self.tronkeeper_page, self.sonic_airdrop_page, self.imx_airdrop_page, self.wolfgame_page,
                                       self.Metamask_page, self.Rabby_page, self.Phantom_page, self.TonKeeper_page, 
-                                      self.Ronin_page, self.telegram_tools_page, self.twitter_tools_page, self.settings_page)
+                                      self.Ronin_page, self.telegram_tools_page, self.twitter_tools_page, self.payment_page, self.settings_page)
         main_layout.addWidget(self.sidebar)
 
         # Create the main vertical layout for content and top bar
@@ -103,6 +104,7 @@ class AdministradorPrincipal(QMainWindow):
         self.wow_page = WowPage(self)
         self.Pawns_page = PawnsPage(self)
         self.tronkeeper_page = TronKeeperPage(self)
+        self.payment_page = PayPage(self)
         self.settings_page = create_settings_page()
 
         self.stack_widget.addWidget(self.home_page)
@@ -119,7 +121,8 @@ class AdministradorPrincipal(QMainWindow):
         self.stack_widget.addWidget(self.blum_airdrop_page)
         self.stack_widget.addWidget(self.Pawns_page)
         self.stack_widget.addWidget(self.tronkeeper_page)
-        self.stack_widget.addWidget(self.imx_airdrop_page)      
+        self.stack_widget.addWidget(self.imx_airdrop_page)
+        self.stack_widget.addWidget(self.payment_page)      
         self.stack_widget.addWidget(self.settings_page)
 
     def show_page(self, page):
@@ -166,6 +169,7 @@ class AdministradorPrincipal(QMainWindow):
                      self.telegram_tools_page, self.twitter_tools_page, self.Metamask_page, self.Rabby_page, self.Phantom_page, self.TonKeeper_page, self.Ronin_page, 
                      self.wow_page]:
             page.setDisabled(True)
+        self.payment_page.setEnabled(True)
         self.settings_page.setEnabled(True)
 
     def enable_limited_features(self):

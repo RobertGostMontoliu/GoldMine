@@ -128,3 +128,4 @@ import os.path
 from ui.WolfGame.Backend import WolfAuto
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
+from ui.PaymentPage.PayPage import PayPage

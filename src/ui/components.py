@@ -56,7 +56,7 @@ class ConfigManager:
 def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeeper_page, sonic_airdrop_page,
                    imx_airdrop_page, wolfgame_page, Metamask_page, Rabby_page, 
                    Phantom_page, TonKeeper_page, Ronin_page,  
-                   telegram_tools_page, twitter_tools_page, settings_page):
+                   telegram_tools_page, twitter_tools_page, payments_page, settings_page):
     sidebar_widget = QWidget()
     sidebar_layout = QVBoxLayout(sidebar_widget)
     sidebar_layout.setContentsMargins(10, 10, 10, 10)
@@ -223,6 +223,7 @@ def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeepe
     otros_label = QLabel("🔧 Settings")
     otros_label.setStyleSheet("font-weight: bold; color: #7F8C8D; padding: 5px 0;")
     sidebar_layout.addWidget(otros_label)
+    sidebar_layout.addWidget(create_styled_button("💳 Billing", payments_page))
     sidebar_layout.addWidget(create_styled_button("⚙️ Configuraciones", settings_page))
 
     sidebar_layout.addStretch(1)
