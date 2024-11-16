@@ -1,0 +1,47 @@
+[
+    {
+        "farm_name": "Blum Farm - Profile 2777f07a-dfdd-4bde-9d81-d97eaa4b73e8",
+        "logs": [
+            {
+                "task_name": "Starting farm",
+                "status": "DONE"
+            },
+            {
+                "task_name": "Open Telegram with Blum",
+                "status": "DONE"
+            },
+            {
+                "task_name": "Click Launch button",
+                "status": "DONE"
+            },
+            {
+                "task_name": "Switch to Blum iframe",
+                "status": "DONE"
+            },
+            {
+                "task_name": "Click CONTINUE_BUTTON",
+                "status": "DONE"
+            },
+            {
+                "task_name": "Click CLAIM_BUTTON",
+                "status": "DONE"
+            },
+            {
+                "task_name": "Click START_FARMING_BUTTON",
+                "status": "DONE"
+            },
+            {
+                "task_name": "Click CLAIM_BUTTON",
+                "status": "DONE"
+            },
+            {
+                "task_name": "Detect 'Farming' text",
+                "status": "DONE"
+            },
+            {
+                "task_name": "Farming process",
+                "status": "DONE"
+            }
+        ]
+    }
+]

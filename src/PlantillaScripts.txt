@@ -1,0 +1,98 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, NoSuchWindowException, WebDriverException, ElementClickInterceptedException, NoSuchElementException
+import time
+import argparse
+import cv2
+import numpy as np
+import math
+from PIL import Image
+import io
+from api_manager import GPMManager, ADSPowerManager, ChromeManager
+from ui.components import ConfigManager
+
+
+def Nombre_de_la_funcion(driver=None, profile_id=None, **kwargs):
+    """
+    Lógica principal del farmeo de Blum en Telegram utilizando Selenium.
+    """
+    max_retries = 2
+    gpm_manager = GPMManager()  # Instancia de GPMManager
+
+    for attempt in range(max_retries):
+        if driver is None:
+            print("No se pudo iniciar el navegador.")
+            return
+        try:
+            """
+        #Aqui va la funcion de la linea 46
+            """
+            if farmeo_principal(driver, Test):
+                print("Farmeo exitoso. Cerrando el perfil.")
+                break  # Si el farmeo fue exitoso, salimos del bucle
+        except Exception as e:
+            print(f"Ocurrió un error durante el proceso: {str(e)}")
+            if attempt < max_retries - 1:
+                print(f"Reintentando... Intento {attempt + 2} de {max_retries}")
+            else:
+                print("Se alcanzó el número máximo de intentos.")
+        finally:
+            print("Finalizando el proceso.")
+            if profile_id:
+                # Cerrar el perfil desde la API
+                gpm_manager.close_browser(profile_id)
+
+def farmeo_principal(driver, test):
+    try:
+        
+        """
+        #AQUI VA EL CODIGO DEL FARMEO PRINCIPAL
+        """
+
+
+
+# --- MultiThread Integration ---
+
+def start_multithread_farming(profiles, num_concurrent, window_settings):
+    """
+    Inicia el farmeo de múltiples perfiles usando la infraestructura de multihilo.
+
+    :param profiles: Lista de IDs de perfiles para farmear.
+    :param num_concurrent: Número de perfiles concurrentes.
+    :param window_settings: Configuraciones de ventana.
+    :return: None
+    """
+    iniciar_farmeo_multiple(profiles, num_concurrent, "blum", window_settings)
+
+
+# --- MAIN ---
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Ejecutar Blum Claim")
+    parser.add_argument("--browser", type=str, required=True, help="Tipo de navegador (gpm, ads, chrome)")
+    parser.add_argument("--profile_id", type=str, help="ID del perfil para GPM")
+    parser.add_argument("--profile_name", type=str, help="Nombre del perfil para Chrome")
+    parser.add_argument("--win_scale", type=float, help="Escala de la ventana")
+    parser.add_argument("--win_pos", type=str, help="Posición de la ventana (x,y)")
+    parser.add_argument("--win_size", type=str, help="Tamaño de la ventana (ancho,alto)")
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    # Importar desde MultiThreadFarming.py
+    from ui.MultiThreadFarming import iniciar_farmeo_multiple
+    args = parse_arguments()
+
+    kwargs = {
+        "win_scale": args.win_scale,
+        "win_pos": args.win_pos,
+        "win_size": args.win_size
+    }
+
+    profiles = [args.profile_id]  # Aquí deberías pasar una lista de IDs de perfiles si son múltiples
+    num_concurrent = 1  # Cambiar a más si deseas farmeo concurrente
+
+    start_multithread_farming(profiles, num_concurrent, kwargs)

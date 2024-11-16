@@ -1,0 +1,49 @@
+Acuerdo de Licencia de Usuario Final (EULA) para GoldMine
+Copyrgith 2024 EjeeDao -- GoldMine
+
+Al descargar, instalar o utilizar la aplicación GoldMine, el usuario acepta los términos y condiciones de esta Licencia de Usuario Final (EULA). Si no está de acuerdo con estos términos, no descargue, instale ni utilice GoldMine.
+
+1. Licencia de Uso
+
+GoldMine se concede bajo una licencia no exclusiva, intransferible y revocable para su uso personal y exclusivo en el dispositivo al que se ha vinculado. La licencia es válida solo para el equipo específico con el que se asoció la clave de activación única, y no puede ser transferida a otro dispositivo sin la aprobación de EjeeDAO, titular de los derechos de la aplicación.
+
+2. Restricciones de Uso
+
+El usuario no podrá, de ninguna manera:
+
+Copiar, modificar, distribuir, descompilar, o realizar ingeniería inversa de la Aplicación, salvo en la medida en que lo permita la ley aplicable.
+Compartir la clave de licencia con terceros ni utilizarla en múltiples dispositivos sin la autorización correspondiente.
+Reproducir o distribuir el contenido de la Aplicación sin el permiso expreso de EjeeDAO.
+
+3. Activación y Licencia Única por Dispositivo
+
+Cada licencia estará vinculada a un único dispositivo a través de una clave de activación única. La clave de activación no puede ser transferida a otros dispositivos, y solo autoriza el uso de la Aplicación en el dispositivo para el cual fue generada.
+
+4. Suscripción y Pago
+
+La Aplicación GoldMine está sujeta a una suscripción mensual. Al adquirir la licencia, el usuario acepta pagar la cantidad acordada según el plan seleccionado. El acceso a la Aplicación continuará mientras la suscripción esté activa y se paguen las tarifas correspondientes. Si el pago no se procesa correctamente o se cancela la suscripción, el acceso a la Aplicación se suspenderá.
+
+5. Expiración y Renovación de Licencia
+
+La clave de licencia será válida por un período de 30 días. El usuario deberá renovar su licencia antes de que expire para continuar utilizando la Aplicación.
+
+6. Propiedad Intelectual
+
+La Aplicación GoldMine y todos los materiales asociados, incluyendo el software, el diseño y los logos, son propiedad exclusiva de EjeeDAO y están protegidos por las leyes de derechos de autor, marcas registradas y otros derechos de propiedad intelectual.
+
+7. Limitación de Responsabilidad
+
+EjeeDAO no será responsable de ningún daño, pérdida o gasto relacionado con el uso o la imposibilidad de usar GoldMine, incluyendo pero no limitándose a daños directos, indirectos, incidentales o consecuentes, incluso si se ha advertido sobre la posibilidad de tales daños.
+
+8. Terminación
+
+EjeeDAO se reserva el derecho de terminar esta Licencia y desactivar la clave de licencia si se infringen los términos de este acuerdo.
+
+9. Modificaciones del Acuerdo
+
+EjeeDAO se reserva el derecho de modificar este acuerdo en cualquier momento. Las modificaciones entrarán en vigor una vez que sean publicadas en nuestra página web o dentro de GoldMine.
+
+10. Aceptación
+
+Al descargar o instalar la Aplicación GoldMine, el usuario confirma que ha leído, entendido y aceptado todos los términos y condiciones de esta Licencia.
+
