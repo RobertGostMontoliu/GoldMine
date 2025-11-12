@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 # Función para cargar la ruta del archivo Excel desde el JSON
 def cargar_ruta_excel_json():
-    json_path = resource_path("ui\\JSON_FILE\\UrlPhantomAccounts.json")
+    json_path = resource_path("ui//JSON_FILE//UrlPhantomAccounts.json")
     if not os.path.exists(json_path):
         raise FileNotFoundError(f"No se encontró el archivo JSON: {json_path}")
     

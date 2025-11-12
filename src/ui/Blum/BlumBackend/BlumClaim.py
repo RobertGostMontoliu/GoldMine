@@ -19,7 +19,7 @@ import json
 from ui.json_path import resource_path
 
 def clear_log_file():
-    log_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+    log_path = resource_path("ui//JSON_FILE//farm_logs.json")
     with open(log_path, 'w') as log_file:
         json.dump([], log_file, indent=4)
 
@@ -38,7 +38,7 @@ class Logger:
             "farm_name": self.farm_name,
             "logs": self.logs
         }
-        log_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+        log_path = resource_path("ui//JSON_FILE//farm_logs.json")
         
         # Read existing logs
         existing_logs = []

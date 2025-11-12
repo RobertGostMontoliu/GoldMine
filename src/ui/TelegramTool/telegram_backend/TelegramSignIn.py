@@ -26,7 +26,7 @@ def telegramTool(driver=None, profile_id=None, **kwargs):
     """
     
     # Construir la ruta al archivo JSON
-    file_path = resource_path("ui\\JSON_FILE\\TelegramTool.json")
+    file_path = resource_path("ui//JSON_FILE//TelegramTool.json")
     
     # Imprimir la ruta para verificar
     print(f"Intentando abrir el archivo JSON en: {file_path}")

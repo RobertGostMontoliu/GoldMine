@@ -21,13 +21,13 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 media_dir = os.path.join(current_dir, 'media')
 
 # Cargar las imágenes de flechas y popup
-arrow_templates = {
-    'up': cv2.imread(resource_path("ui\\media\\wolf_media\\arrow_up.png"), cv2.IMREAD_GRAYSCALE),
-    'down': cv2.imread(resource_path("ui\\media\\wolf_media\\arrow_down.png"), cv2.IMREAD_GRAYSCALE),
-    'left': cv2.imread(resource_path("ui\\media\\wolf_media\\arrow_left.png"), cv2.IMREAD_GRAYSCALE),
-    'right': cv2.imread(resource_path("ui\\media\\wolf_media\\arrow_right.png"), cv2.IMREAD_GRAYSCALE)
+arrows = {
+    'up': cv2.imread(resource_path("ui/media/wolf_media/arrow_up.png"), cv2.IMREAD_GRAYSCALE),
+    'down': cv2.imread(resource_path("ui/media/wolf_media/arrow_down.png"), cv2.IMREAD_GRAYSCALE),
+    'left': cv2.imread(resource_path("ui/media/wolf_media/arrow_left.png"), cv2.IMREAD_GRAYSCALE),
+    'right': cv2.imread(resource_path("ui/media/wolf_media/arrow_right.png"), cv2.IMREAD_GRAYSCALE)
 }
-dig_e_template = cv2.imread(resource_path("ui\\media\\wolf_media\\dig_e.png"), cv2.IMREAD_GRAYSCALE)
+dig_e_template = cv2.imread(resource_path("ui/media/wolf_media/dig_e.png"), cv2.IMREAD_GRAYSCALE)
 
 def move(driver, direction):
     if direction == 'up':
@@ -62,7 +62,7 @@ def detect_arrows(region):
     denoised = cv2.fastNlMeansDenoising(binary)
     
     # Verificación para cada dirección
-    for direction, template in arrow_templates.items():
+    for direction, template in arrows.items():
         result = cv2.matchTemplate(denoised, template, cv2.TM_CCOEFF_NORMED)
         min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
         
@@ -125,7 +125,7 @@ def handle_loot(driver):
         for attempt in range(max_attempts):
             try:
                 # Cargar la imagen del botón OK
-                ok_template = cv2.imread(resource_path("ui\\media\\wolf_media\\ok_e.png"), cv2.IMREAD_GRAYSCALE)
+                ok_template = cv2.imread(resource_path("ui/media/wolf_media/ok_e.png"), cv2.IMREAD_GRAYSCALE)
                 if ok_template is None:
                     print("Error: No se pudo cargar la imagen ok_e.png")
                     return False
@@ -632,7 +632,7 @@ def use_inventory_item(driver, slot_number):
         max_attempts = 10
         for attempt in range(max_attempts):
             try:
-                ok_template = cv2.imread(resource_path("ui\\media\\wolf_media\\ok_e.png"), cv2.IMREAD_GRAYSCALE)
+                ok_template = cv2.imread(resource_path("ui/media/wolf_media/ok_e.png"), cv2.IMREAD_GRAYSCALE)
                 if ok_template is None:
                     print("Error: No se pudo cargar la imagen ok_e.png")
                     return False

@@ -116,7 +116,7 @@ class PawnsPage(PlantillaAirdrop):
         import json
         
         # Create the JSON file path
-        json_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+        json_path = resource_path("ui//JSON_FILE//farm_logs.json")
         
         # Ensure the directory exists
         json_dir = os.path.dirname(json_path)

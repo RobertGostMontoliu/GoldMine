@@ -10,7 +10,7 @@ from ui.json_path import resource_path
 class GPMManager:
     def __init__(self, api_url="http://127.0.0.1:19995"):
         # Load url from config.json
-        config_path = resource_path("ui\\JSON_FILE\\config.json")
+        config_path = resource_path("ui/JSON_FILE/config.json")
         with open(config_path, 'r') as config_file:
             config = json.load(config_file)
     
@@ -142,7 +142,7 @@ class GPMManager:
 class ADSPowerManager:
     def __init__(self, api_url):
         # Load url from config.json
-        config_path = resource_path("ui\\JSON_FILE\\config.json")
+        config_path = resource_path("ui/JSON_FILE/config.json")
         with open(config_path, 'r') as config_file:
             config = json.load(config_file)
 

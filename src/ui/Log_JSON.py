@@ -17,6 +17,6 @@ class Logger:
             "farm_name": self.farm_name,
             "logs": self.logs
         }
-        log_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+        log_path = resource_path("ui//JSON_FILE//farm_logs.json")
         with open(log_path, 'w') as log_file:
             json.dump(log_data, log_file, indent=4)

@@ -401,7 +401,7 @@ def save_config(gpm_url, adspower_url, chrome_path, screen):
         "chrome_path": chrome_path,
         "screen_index": screen_number
     }
-    config_path = resource_path("ui\\JSON_FILE\\config.json")
+    config_path = resource_path("ui//JSON_FILE//config.json")
     with open(config_path, 'w') as config_file:
         json.dump(config, config_file, indent=4)
     print("Configuración guardada con éxito.")

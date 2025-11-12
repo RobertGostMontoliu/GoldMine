@@ -3,7 +3,7 @@ import os
 from datetime import datetime, timedelta
 from ui.json_path import resource_path
 
-KEYS_FILE = resource_path("ui\\JSON_FILE\\keys.json")
+KEYS_FILE = resource_path("ui//JSON_FILE//keys.json")
 
 class KeyManager:
     @staticmethod

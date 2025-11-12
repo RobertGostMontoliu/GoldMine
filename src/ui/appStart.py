@@ -20,7 +20,7 @@ def resource_path(relative_path):
 
 # Load screen configuration from config.json
 def load_screen_index():
-    config_path = resource_path("src\\ui\\JSON_FILE\\config.json")
+    config_path = resource_path("src//ui//JSON_FILE//config.json")
     if os.path.exists(config_path):
         with open(config_path, "r") as config_file:
             config = json.load(config_file)

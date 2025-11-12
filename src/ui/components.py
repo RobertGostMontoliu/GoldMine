@@ -5,7 +5,7 @@ from PyQt5.QtCore import Qt, QSize
 import json
 from ui.json_path import resource_path
 
-CONFIG_FILE = resource_path("ui\\JSON_FILE\\config.json")
+CONFIG_FILE = resource_path("ui//JSON_FILE//config.json")
 
 class ConfigManager:
     @staticmethod
@@ -63,7 +63,7 @@ def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeepe
 
     # Logo
     logo_label = QLabel()
-    logo_path = resource_path("ui\\media\\app_media\\logo.png")
+    logo_path = resource_path("ui//media//app_media//logo.png")
     if os.path.exists(logo_path):
         logo_pixmap = QPixmap(logo_path)
         logo_label.setPixmap(logo_pixmap.scaled(180, 180, Qt.KeepAspectRatio, Qt.SmoothTransformation))
@@ -131,7 +131,7 @@ def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeepe
     general_label = QLabel("🏠 General")
     general_label.setStyleSheet("font-weight: bold; color: #7F8C8D; padding: 5px 0;")
     sidebar_layout.addWidget(general_label)
-    sidebar_layout.addWidget(create_styled_button("Dashboard", home_page, icon_path=resource_path("ui\\media\\app_media\\dashboard_logo.png")))
+    sidebar_layout.addWidget(create_styled_button("Dashboard", home_page, icon_path=resource_path("ui//media//app_media//dashboard_logo.png")))
     sidebar_layout.addSpacing(10)
 
     # Category: Active Farms
@@ -140,7 +140,7 @@ def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeepe
     sidebar_layout.addWidget(farmeos_label)
     
     # Toggle button for Telegram Farms
-    telegram_farms_button = create_styled_button("Telegram Farms", None, icon_path=resource_path("ui\\media\\app_media\\Telegram_icon.png"))
+    telegram_farms_button = create_styled_button("Telegram Farms", None, icon_path=resource_path("ui//media//app_media//Telegram_icon.png"))
     sidebar_layout.addWidget(telegram_farms_button)
     
     # Container for Telegram Farms sub-buttons
@@ -151,10 +151,10 @@ def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeepe
     telegram_farms_container.setVisible(False)  # Initially hidden
 
     # Sub-buttons for Telegram Farms
-    blum_btn = create_styled_button2("Blum", Blum_page, icon_path=resource_path("ui\\media\\app_media\\blum_logo.png"))
-    Wow_btn = create_styled_button2("Wow", Wow_page, icon_path=resource_path("ui\\media\\app_media\\wow_logo.png"))
-    pawns_btn = create_styled_button2("Pawns", Pawns_page, icon_path=resource_path("ui\\media\\app_media\\pawns_logo.png"))
-    tronkeeper_btn = create_styled_button2("TronKeeper", TronKeeper_page, icon_path=resource_path("ui\\media\\app_media\\tronkeeper_logo.png"))
+    blum_btn = create_styled_button2("Blum", Blum_page, icon_path=resource_path("ui//media//app_media//blum_logo.png"))
+    Wow_btn = create_styled_button2("Wow", Wow_page, icon_path=resource_path("ui//media//app_media//wow_logo.png"))
+    pawns_btn = create_styled_button2("Pawns", Pawns_page, icon_path=resource_path("ui//media//app_media//pawns_logo.png"))
+    tronkeeper_btn = create_styled_button2("TronKeeper", TronKeeper_page, icon_path=resource_path("ui//media//app_media//tronkeeper_logo.png"))
 
     telegram_farms_layout.addWidget(blum_btn)
     telegram_farms_layout.addWidget(Wow_btn)
@@ -171,9 +171,9 @@ def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeepe
     telegram_farms_button.clicked.connect(toggle_telegram_farms)
     
     # Other main options in the sidebar
-    sidebar_layout.addWidget(create_styled_button("Sonic airdrop", sonic_airdrop_page, icon_path=resource_path("ui\\media\\app_media\\Sonic_logo.png")))
-    sidebar_layout.addWidget(create_styled_button("IMX airdrop", imx_airdrop_page, icon_path=resource_path("ui\\media\\app_media\\IMX_logo.png")))
-    sidebar_layout.addWidget(create_styled_button("Wolf Game", wolfgame_page, icon_path=resource_path("ui\\media\\app_media\\Wolf_logo.png")))
+    sidebar_layout.addWidget(create_styled_button("Sonic airdrop", sonic_airdrop_page, icon_path=resource_path("ui//media//app_media//Sonic_logo.png")))
+    sidebar_layout.addWidget(create_styled_button("IMX airdrop", imx_airdrop_page, icon_path=resource_path("ui//media//app_media//IMX_logo.png")))
+    sidebar_layout.addWidget(create_styled_button("Wolf Game", wolfgame_page, icon_path=resource_path("ui//media//app_media//Wolf_logo.png")))
     sidebar_layout.addSpacing(10)
 
     # Category: Wallet Tools
@@ -182,7 +182,7 @@ def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeepe
     sidebar_layout.addWidget(tools_label)
 
     # Toggle button for Wallet Tools
-    wallet_tools_button = create_styled_button("💼 Wallet tools", None, icon_path=resource_path("ui\\media\\app_media\\wallet_icon.png"))
+    wallet_tools_button = create_styled_button("💼 Wallet tools", None, icon_path=resource_path("ui//media//app_media//wallet_icon.png"))
     sidebar_layout.addWidget(wallet_tools_button)
 
     # Container for Wallet Tools sub-buttons
@@ -193,11 +193,11 @@ def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeepe
     wallet_tools_container.setVisible(False)  # Initially hidden
 
     # Sub-buttons for Wallet Tools
-    metamask_btn = create_styled_button2("Metamask", Metamask_page, icon_path=resource_path("ui\\media\\app_media\\metamask_icon.png"))
-    rabby_btn = create_styled_button2("Rabby", Rabby_page, icon_path=resource_path("ui\\media\\app_media\\rabby_icon.png"))
-    phantom_btn = create_styled_button2("Phantom", Phantom_page, icon_path=resource_path("ui\\media\\app_media\\solana_icon.png"))
-    tonkeeper_btn = create_styled_button2("TonKeeper", TonKeeper_page, icon_path=resource_path("ui\\media\\app_media\\ton_icon.png"))
-    ronin_btn = create_styled_button2("Ronin", Ronin_page, icon_path=resource_path("ui\\media\\app_media\\ronin_logo.png"))
+    metamask_btn = create_styled_button2("Metamask", Metamask_page, icon_path=resource_path("ui//media//app_media//metamask_icon.png"))
+    rabby_btn = create_styled_button2("Rabby", Rabby_page, icon_path=resource_path("ui//media//app_media//rabby_icon.png"))
+    phantom_btn = create_styled_button2("Phantom", Phantom_page, icon_path=resource_path("ui//media//app_media//solana_icon.png"))
+    tonkeeper_btn = create_styled_button2("TonKeeper", TonKeeper_page, icon_path=resource_path("ui//media//app_media//ton_icon.png"))
+    ronin_btn = create_styled_button2("Ronin", Ronin_page, icon_path=resource_path("ui//media//app_media//ronin_logo.png"))
 
     wallet_tools_layout.addWidget(metamask_btn)
     wallet_tools_layout.addWidget(rabby_btn)
@@ -215,8 +215,8 @@ def create_sidebar(window, home_page, Blum_page, Wow_page, Pawns_page, TronKeepe
     wallet_tools_button.clicked.connect(toggle_wallet_tools)
 
     # Other tools and settings
-    sidebar_layout.addWidget(create_styled_button("Telegram tools", telegram_tools_page, icon_path=resource_path("ui\\media\\app_media\\Telegram_tools.png")))
-    sidebar_layout.addWidget(create_styled_button("Twitter tools", twitter_tools_page, icon_path=resource_path("ui\\media\\app_media\\twitter_logo.png")))
+    sidebar_layout.addWidget(create_styled_button("Telegram tools", telegram_tools_page, icon_path=resource_path("ui//media//app_media//Telegram_tools.png")))
+    sidebar_layout.addWidget(create_styled_button("Twitter tools", twitter_tools_page, icon_path=resource_path("ui//media//app_media//twitter_logo.png")))
     sidebar_layout.addSpacing(10)
 
     # Category: Settings
@@ -237,7 +237,7 @@ def create_profile_button(window):
 
     # Botón de perfil
     profile_button = QToolButton()
-    user_icon_path = resource_path("ui\\media\\app_media\\user_icon.png")
+    user_icon_path = resource_path("ui//media//app_media//user_icon.png")
     if os.path.exists(user_icon_path):
         profile_button.setIcon(QIcon(user_icon_path))
     else:

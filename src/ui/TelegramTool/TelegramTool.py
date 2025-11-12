@@ -240,7 +240,7 @@ class TelegramToolPage(PlantillaAirdrop):
             
     def button_farm_one(self):
         # Clear the content of farm_logs.json
-        json_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+        json_path = resource_path("ui//JSON_FILE//farm_logs.json")
         with open(json_path, 'w') as file:
             json.dump([], file)
         
@@ -312,7 +312,7 @@ class TelegramToolPage(PlantillaAirdrop):
 
     def button_farm_two(self):
         # Clear the content of farm_logs.json
-        json_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+        json_path = resource_path("ui//JSON_FILE//farm_logs.json")
         with open(json_path, 'w') as file:
             json.dump([], file)
         
@@ -409,7 +409,7 @@ class TelegramToolPage(PlantillaAirdrop):
         }
 
         # Guardar en un archivo JSON
-        file_path = resource_path("ui\\JSON_FILE\\TelegramTool.json")
+        file_path = resource_path("ui//JSON_FILE//TelegramTool.json")
         with open(file_path, "w") as json_file:
             json.dump(data, json_file, indent=4)
             
@@ -421,7 +421,7 @@ class TelegramToolPage(PlantillaAirdrop):
         }
 
         # Guardar en un archivo JSON
-        file_path = resource_path("ui\\JSON_FILE\\TelegramToolPasswords.json")
+        file_path = resource_path("ui//JSON_FILE//TelegramToolPasswords.json")
         with open(file_path, "w") as json_file:
             json.dump(data, json_file, indent=4)
             
@@ -541,7 +541,7 @@ class TelegramToolPage(PlantillaAirdrop):
             QMessageBox.warning(self, "Advertencia", f"No logs found for profile {profile_id}")
             
     def load_farm_logs(self):
-        file_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+        file_path = resource_path("ui//JSON_FILE//farm_logs.json")
         with open(file_path, 'r') as file:
             farm_logs = json.load(file)
         return farm_logs

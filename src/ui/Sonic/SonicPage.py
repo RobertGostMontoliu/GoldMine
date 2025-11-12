@@ -130,7 +130,7 @@ class SonicPage(PlantillaAirdrop):
             
     def button_farm_one(self):
         # Clear the content of farm_logs.json
-        json_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+        json_path = resource_path("ui//JSON_FILE//farm_logs.json")
         with open(json_path, 'w') as file:
             json.dump([], file)
         
@@ -186,7 +186,7 @@ class SonicPage(PlantillaAirdrop):
 
     def button_farm_two(self):
         # Clear the content of farm_logs.json
-        json_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+        json_path = resource_path("ui//JSON_FILE//farm_logs.json")
         with open(json_path, 'w') as file:
             json.dump([], file)
         
@@ -336,7 +336,7 @@ class SonicPage(PlantillaAirdrop):
         return selected_profiles
     
     def load_farm_logs(self):
-        file_path = resource_path("ui\\JSON_FILE\\farm_logs.json")
+        file_path = resource_path("ui//JSON_FILE//farm_logs.json")
         with open(file_path, 'r') as file:
             farm_logs = json.load(file)
         return farm_logs
