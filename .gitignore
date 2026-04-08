@@ -1,15 +1,51 @@
-# Ignore everything
-*
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
 
-# Except the src directory
-!src/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+*.egg
 
-# Track files and subdirectories inside src/
-!src/**
+# Sensitive Configuration & Logs
+src/ui/JSON_FILE/config.json
+src/ui/JSON_FILE/keys.json
+src/ui/JSON_FILE/TelegramTool.json
+src/ui/JSON_FILE/TelegramToolPasswords.json
+src/ui/JSON_FILE/UrlMetamaskAccounts.json
+src/ui/JSON_FILE/farm_logs.json
+*.log
 
-# Don't ignore the requirements.txt file
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Environment & Temporary
+.env
+.env.local
+*.tmp
+*.bak
+
+# Private credentials (never commit)
+**/credentials/
+**/*private*
+**/*secret*
+**/*password*
+**/*token*
+**/*wallet*
+
+# Keep tracked files
 !requirements.txt
-!.gitignore
-
-
-# 8EzLaEtJA1VSddeci63oRJkbLDJ8cqPdLHb87HiE2yPF    wallet pahtom prueba
+!README.md
+!run.sh
+!src/

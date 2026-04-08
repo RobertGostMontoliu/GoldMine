@@ -1,6 +1,6 @@
 {
     "gpm_url": "http://your-gpm-server:port",
     "adspower_url": "http://your-adspower-server:port/",
-    "chrome_path": "",
+    "chrome_path": "/path/to/google-chrome",
     "screen_index": "1"
 }
